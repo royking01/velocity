@@ -8,6 +8,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgProgressModule } from "ngx-progressbar"
 
 import { LogisticsComponent } from './logistics/logistics.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { LogisticsComponent } from './logistics/logistics.component';
         NgbModule,
         ChartsModule,
         NgApexchartsModule,
-        NgProgressModule
+        NgProgressModule,
+        FormsModule
     ],
     exports: [],
     declarations: [

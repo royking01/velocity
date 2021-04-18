@@ -6,10 +6,7 @@ export const users =
         "name": "Ramsey Cummings",
         "gender": "male",
         "age": 52,
-        "address": {
-            "state": "South Carolina",
-            "city": "Glendale"
-        }
+       
     },
     {
         "id": 1,

@@ -12,6 +12,7 @@ import { DTPinningComponent } from './pinning/dt-pinning.component';
 import { DTSelectionComponent } from './selection/dt-selection.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AddCompanyComponent } from './add-company/add-company.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,13 +23,16 @@ import { AddCompanyComponent } from './add-company/add-company.component';
     DTSelectionComponent,
     AddUserComponent,
     AddCompanyComponent,
+    
 
   ],
   imports: [
     CommonModule,
     DatatableRoutingModule,
     NgbModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    FormsModule
+
   ]
 })
 export class DatatableModule { }

@@ -4,7 +4,8 @@ export const company =
             "name": "EthelPrice",
             "gender": "female",
             "company": "Johnson, Johnson and Partners, LLC CMP DDC",
-            "age": 22
+            "age": 22,
+            "id":1
         },
         {
             "name": "Claudine Neal",

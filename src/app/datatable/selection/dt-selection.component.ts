@@ -22,7 +22,7 @@ export class DTSelectionComponent {
   //  On select of dataTable's data row
   async onSelect(e) {
     //your code here
-    let id = e.selected[0].name;
+    let id = e.selected[0].id;
     location.href = `/pages/user-profile/${id}`;
     console.log(id)
   }
