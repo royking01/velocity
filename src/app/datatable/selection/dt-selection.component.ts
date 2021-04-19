@@ -24,7 +24,7 @@ export class DTSelectionComponent {
     //your code here
     let id = e.selected[0].id;
     location.href = `/pages/company-profile/${id}`;
-    console.log(id)
+    // console.log(id)
   }
 
   //  On Activation of dataTable's data row
@@ -35,17 +35,17 @@ export class DTSelectionComponent {
   // const id = +this.route.snapshot.paramMap.get('id');
   getUsers() {
     const data = []
-    let did = []
+    // let did = []
     this.UserService.getCompany()
     .then(e => {
        e.forEach((doc)=>{
-        console.log('doc-id',doc)
+        // console.log('doc-id',doc)
         data.push(doc)
-        console.log('data',data)
+        // console.log('data',data)
         let flat = [].concat.apply([], data)
         this.rows = flat 
         let flattened = [].concat.apply([], this.rows)
-        console.log('flattened', flattened)
+        // console.log('flattened', flattened)
         this.rows = flattened
         // alert(doc[1].name)
         // console.log('rows-new', this.rows)

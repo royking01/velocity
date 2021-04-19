@@ -55,10 +55,10 @@ export class AddUserComponent implements OnInit {
           .collection("dispatchers")
           .doc(this.Name)
           .set(user, { merge: true });
-        // location.href = "/dashboard";
-        console.log(user);
-        alert(this.Name)
-        console.log( this.Name)
+        location.href = "/datatable/dispatch";
+        // console.log(user);
+        // alert(this.Name)
+        // console.log( this.Name)
         this.registering = false
       }else{
         alert('false information')
