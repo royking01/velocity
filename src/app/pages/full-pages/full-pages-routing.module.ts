@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BlankComponent } from './blank/blank.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,13 @@ const routes: Routes = [
         component: UserProfileComponent,
         data: {
           title: 'User Profile'
+        }
+      },
+      {
+        path: 'company-profile/:id',
+        component: CompanyProfileComponent,               
+        data: {
+          title: 'Company Profile'
         }
       },
     ]

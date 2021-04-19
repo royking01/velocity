@@ -30,7 +30,7 @@ export class UserProfileComponent implements OnInit {
        if(!user) return location.href = '/dashboard'
        if(user != null) this.userAvailable = true
 
-       console.log(user)
+      //  console.log(user)
       }
     )
     }

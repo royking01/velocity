@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { BlankComponent } from './blank/blank.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 
 @NgModule({
   declarations: [
     InvoiceComponent,
     BlankComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CompanyProfileComponent
  ],
   imports: [
     CommonModule,

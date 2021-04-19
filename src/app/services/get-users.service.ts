@@ -31,7 +31,7 @@ export class GetUsersService {
         });
         // console.log('cties', cities);
         this.level = cities;
-        console.log("levels", cities);
+        // console.log("levels", cities);
       });
   
       return of(cities)
@@ -52,11 +52,40 @@ export class GetUsersService {
     .get()
     return user.data()
   }
-  getCompany(): Observable<any> {
-    return of(company);
+  public async getCompany(){
+    var cities = [];
+    await firebase
+      .firestore()
+      .collection("db")
+      .doc("users")
+      .collection("companies")
+      .where("name", "!=", "")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          cities.push(doc.data());
+          // this.level.push(doc.data())
+        });
+        // console.log('cties', cities);
+        this.level = cities;
+        // console.log("levels", cities);
+      });
+  
+      return of(cities)
+   
   }
-  getComp(id): Observable<any> {
+  async getComp(id: string) {
+    if(id == null) return
+    const user = await firebase
+     .firestore()
+     .collection("db")
+     .doc("users")
+     .collection("companies")
+     // .where("id", "==", id)
+     .doc(id)
+     .get()
+     return user.data()
     // console.log(users)
-    return of(company.find((u) => u.id === id));
+    // return of(company.find((u) => u.id === id));
   }
 }

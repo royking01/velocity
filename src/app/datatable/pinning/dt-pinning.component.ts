@@ -35,6 +35,8 @@ export class DTPinningComponent implements OnInit{
     alert(data.name);
     console.log(e);
   }
+  
+  // get dispatch riders fro services
   test(){
     const data = []
     let did = []
