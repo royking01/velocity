@@ -745,6 +745,8 @@ WTFPL
 firebase
 Apache-2.0
 
+firebase/app
+
 flatpickr
 MIT
 The MIT License (MIT)

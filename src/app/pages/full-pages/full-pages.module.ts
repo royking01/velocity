@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { FullPagesRoutingModule } from './full-pages-routing.module';
+import { FormsModule } from "@angular/forms"
+ import { FullPagesRoutingModule } from './full-pages-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { InvoiceComponent } from './invoice/invoice.component';
@@ -20,7 +20,8 @@ import { CompanyProfileComponent } from './company-profile/company-profile.compo
   imports: [
     CommonModule,
     FullPagesRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ]
 })
 export class FullPagesModule { }
