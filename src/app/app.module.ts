@@ -15,7 +15,7 @@ import { FullLayoutComponent } from "./layouts/full/full-layout.component";
 
 import { ToastrModule } from 'ngx-toastr';
 import { UiSwitchModule } from 'ngx-ui-switch';
-
+import {  Guards } from "./guard";
 import { NgProgressModule } from "ngx-progressbar"
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -52,8 +52,8 @@ import * as $ from 'jquery';
     PerfectScrollbarModule
   ],
   providers: [
-    { provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG }
-  ],
+    { provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG },
+  Guards],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

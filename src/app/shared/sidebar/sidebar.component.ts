@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ROUTES } from './sidebar-routes.config';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { SidebarService } from "../sidebar/sidebar.service";
-
+// import * from 'firebase'
 import * as $ from 'jquery';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -12,7 +13,7 @@ import * as $ from 'jquery';
 })
 
 export class SidebarComponent implements OnInit {
-    
+//    auth = firebase.auth() 
     public menuItems: any[];
 
   
@@ -60,6 +61,13 @@ export class SidebarComponent implements OnInit {
         this.menuItems = ROUTES.filter(menuItem => menuItem);
         $.getScript('./assets/js/app-sidebar.js');
 
+    }
+    logOut(){
+
+        firebase.auth().signOut()
+        localStorage.clear()
+        // location.href='/auth'
+        alert('signed out')
     }
 
 }

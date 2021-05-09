@@ -6,16 +6,17 @@ import { ContentLayoutComponent } from "./layouts/content/content-layout.compone
 
 import { Full_ROUTES } from "./shared/routes/full-layout.routes";
 import { CONTENT_ROUTES } from "./shared/routes/content-layout.routes";
+import { Guards } from "./guard";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'auth',
     pathMatch: 'full',
   },
-  { path: '', component: FullLayoutComponent, data: { title: 'full Views' }, children: Full_ROUTES },
+  { path: '', component: FullLayoutComponent, data: { title: 'full Views' }, children: Full_ROUTES,canActivate:[Guards]  },
   { path: '', component: ContentLayoutComponent, data: { title: 'content Views' }, children: CONTENT_ROUTES },
-  { path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'auth', }
 ];
 
 @NgModule({

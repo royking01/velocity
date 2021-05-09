@@ -15,7 +15,7 @@ const routes: Routes = [
     children: [
       
       {
-        path: 'signin1',
+        path: '',
         component: Signin1Component,
         data: {
           title: 'SignIn 1'
@@ -62,6 +62,13 @@ const routes: Routes = [
         data: {
           title: 'Reset Password 2'
         }
+
+      },
+      { path: '**', redirectTo: 'auth', },
+      {
+        path: '',
+        redirectTo: 'auth',
+        pathMatch: 'full',
       },
       
     ]

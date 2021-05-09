@@ -5,7 +5,8 @@ import { Routes } from '@angular/router';
 export const Full_ROUTES: Routes = [
     {
         path: 'dashboard',
-        loadChildren: () => import('../../dashboard/dashboard.module').then(m => m.DashboardModule)
+        loadChildren: () => import('../../dashboard/dashboard.module').then(m => m.DashboardModule),
+        // canActivate:[Guards] 
     },
     {
         path: 'components',

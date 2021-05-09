@@ -166,7 +166,7 @@ export const ROUTES: RouteInfo[] = [
     //         ]
     // },
     // { path: 'https://codervent.com/dashtreme-angular/docs/', title: 'Documentation', icon: 'fa fa-address-book', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-    { path: 'https://themeforest.net/user/codervent/portfolio', title: 'Support', icon: 'zmdi zmdi-help-outline', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] }
+    { path: '/auth', title: 'SignOut', icon: 'zmdi zmdi-help-outline', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
 
     
 ];
