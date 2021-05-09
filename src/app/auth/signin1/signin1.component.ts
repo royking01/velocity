@@ -32,7 +32,6 @@ export class Signin1Component implements OnInit {
       console.log(
         "please make  sure you fill in your credentials with the appropriate information"
       );
-      // location.href='/home';/
     }
   }
   //  On submit click, reset field value

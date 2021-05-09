@@ -39,7 +39,6 @@ export class DTPinningComponent implements OnInit{
   // get dispatch riders fro services
   test(){
     const data = []
-    let did = []
     this.UserService.test()
     .then(e => {
        e.forEach((doc)=>{
@@ -49,33 +48,18 @@ export class DTPinningComponent implements OnInit{
         let flat = [].concat.apply([], data)
         this.rows = flat 
         let flattened = [].concat.apply([], this.rows)
-        console.log('flattened', flattened)
         this.rows = flattened
-        // alert(doc[1].name)
-        console.log('rows-new', this.rows)
        })
     })
 }
   async onSelect(e) {
-    //your code here
-    // alert(e.selected[0].id)
-    // console.log(e.selected[0].name, e.selected[0].id)
     let id = e.selected[0].id;
     location.href = `/pages/user-profile/${id}`;
-    // alert(`/pages/user-profile/${id}`)
   }
 
   //  On Activation of dataTable's data row
   onActivate(event) {
     //your code here
   }
-
-//  getTest(){
-//     this.UserService.test()
-//     .then((e)=>{
-//       // this.rows = e
-//       console.log('TEST', e)
-//     })
-//   }
 
 }
